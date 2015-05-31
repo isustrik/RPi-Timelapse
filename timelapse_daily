@@ -1,0 +1,5 @@
+#Run from crontab at sunrise
+
+mkdir /home/pi/tl/farm-$(date +%Y_%m_%d)/
+
+raspistill -n -o /home/pi/tl/farm-$(date +%Y_%m_%d)/farm_%05d.jpg -tl 60000 -t 21600000 #1 minute between pictures for 6hrs
